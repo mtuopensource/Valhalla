@@ -24,7 +24,7 @@ import Quote from './components/Quote.vue'
 import Partners from './components/Partners.vue'
 
 export default {
-  name: 'app',
+  name: 'HomePage',
   components: {
     Header, Footer, Hero, IntroContent, Officers, Projects, Information, Quote, Partners
   }
