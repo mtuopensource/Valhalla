@@ -1,7 +1,8 @@
 <?php
 add_theme_support('title-tag');
 add_action('wp_enqueue_scripts', function() {
-    wp_enqueue_script('valhalla', get_template_directory_uri() . '/dist/build.js', array(), false, true);
+    wp_enqueue_script('jquery');
+    wp_enqueue_script('valhalla', get_template_directory_uri() . '/dist/build.js', array('jquery'), false, true);
 });
 
 /* Register the main navigation, for the header. */

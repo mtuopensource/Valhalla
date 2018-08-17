@@ -42,6 +42,7 @@
       jQuery.getJSON(
         wp_site_url.concat("/wp-json/wp-menus/v1/menus/primary-menu"),
         data => {
+          console.log(data);
           this.menu_items = data;
         }
       );
