@@ -1,0 +1,26 @@
+{
+  "name": "valhalla",
+  "version": "1.0.0",
+  "description": "Valhalla is a theme created for the Open Source Club at Michigan Tech.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "css-loader": "^0.28.11",
+    "file-loader": "^1.1.11",
+    "moment": "^2.22.2",
+    "postcss-import": "^11.1.0",
+    "postcss-loader": "^2.1.5",
+    "tailwindcss": "^0.6.1",
+    "vue-loader": "^15.2.4",
+    "vue-template-compiler": "^2.5.16",
+    "webpack": "^4.15.1",
+    "webpack-cli": "^3.0.8"
+  },
+  "dependencies": {
+    "vue": "^2.5.16"
+  }
+}
