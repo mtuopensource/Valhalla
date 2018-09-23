@@ -1,6 +1,10 @@
 /*
  * Theme Name: Valhalla
- * Author: Austin Walhof, Isaac Smith, Ryan Philipps 
- * Description: Valhalla is a theme created for the Open Source Club at Michigan Tech.
- * Version: 1.0.0
-*/
+ * Author: Austin Walhof and Isaac Smith 
+ * Description: A custom WordPress theme for the Open Source Club at Michigan Tech.
+ * Version: 1.0
+ */
+
+ .h-128 {
+   height: 32rem;
+ }

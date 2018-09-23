@@ -1,2 +1,4 @@
-<?php get_header(); ?>
-<?php get_footer(); ?>
+<?php
+  $context = Timber::get_context();
+  Timber::render( '', $context );
+?>
