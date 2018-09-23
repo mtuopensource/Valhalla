@@ -1,1 +1,110 @@
 {% extends 'pages/Base.twig' %}
+{% block content %}
+  {% include 'pages/landingPage/hero/Hero.twig' with {'quote': post.hero_quote, 'author': post.hero_author, 'image': TimberImage(post.hero_image) } only %}
+  {% include 'pages/landingPage/intro/Intro.twig' with {'mission': post.mission, 'cta': post.mission_cta, 'cta_link': post.mission_cta_link } only %}
+  
+  <section id="projects" class="p-8 bg-white">
+    <div class="container mx-auto">
+      <div class="text-center mb-8">
+        <h2 class="text-4xl font-semibold">
+          Our Projects
+        </h2>
+      </div>
+      <div class="flex justify-between">
+        {% for n in 0..2 %}
+        <div class="w-full lg:w-1/4 text-center mb-8 lg:mb-0">
+          <div class="bg-black mb-3 shadow-md">
+            <div class="h-48 bg-center bg-cover" style="background-image: url(https://placehold.it/376x192);"></div>
+          </div>
+          <span class="text-2xl">
+            TechChat
+          </span>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="information" class="p-8 bg-grey-lighter">
+    <div class="container mx-auto lg:flex">
+      <div class="w-full lg:w-2/5 lg:mr-8">
+        <div class="flex items-center justify-between">
+          <h2>Dates to Remember</h2>
+          {% include 'components/button/Button.twig' with {'title': 'All Events' } only %}
+        </div>
+        <hr class="bg-black h-px"> {% for n in 0..3 %}
+        <div class="flex items-center justify-between mb-4">
+          <div class="w-24 h-24 flex-no-shrink bg-blue mr-4 text-center flex flex-col items-center justify-center">
+            <span class="text-white font-bold text-4xl leading-none">
+              25
+            </span>
+            <span class="text-white font-light text-2xl leading-none">
+              Sept
+            </span>
+          </div>
+          <div class="block bg-white flex-grow h-24 p-4">
+            <span class="font-semibold text-xl leading-normal">
+              Weekly Meeting
+            </span>
+            <br>
+            <span class="font-light text-lg leading-normal">
+              Fisher Hall 133, 6 - 7pm
+            </span>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+      <div class="w-full lg:w-3/5">
+
+        <div class="w-full lg:flex mb-8">
+          <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover text-center overflow-hidden" style="background-image: url(https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260);"></div>
+
+
+
+
+          <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white p-4 flex flex-col justify-between leading-normal">
+            <div class="mb-8">
+              <div class="text-black font-bold text-xl mb-2">
+                Are you interested in open source software, programming, or anything code related?
+              </div>
+              <p class="text-grey-darker">
+                If this sounds like you, you might be a perfect member for the Open Source Club at Michigan Tech!
+              </p>
+            </div>
+
+
+            {% include 'components/button/Button.twig' with {'title': 'Join the Club' } only %}
+          </div>
+          
+        </div>
+
+        <div class="w-full lg:flex mb-8" style="margin-top:-2px;">
+            
+  
+  
+  
+  
+            <div class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white p-4 flex flex-col justify-between leading-normal">
+              <div class="mb-8">
+                <div class="text-black mb-2">
+                  <span class="font-bold text-xl">Open Source 101</span>&nbsp;<span class="text-sm">5 Days Ago</span>
+                  <br />
+                  <span class="text-sm">John Doe</span>
+                </div>
+                <p class="text-grey-darker">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum a dolorum alias ea commodi aspernatur, architecto numquam dignissimos vero unde.
+                </p>
+              </div>
+  
+  
+              {% include 'components/button/Button.twig' with {'title': 'Read More' } only %}
+            </div>
+            <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover text-center overflow-hidden" style="background-image: url(https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260);"></div>
+            
+          </div>
+
+      </div>
+    </div>
+  </section>
+
+    {% endblock %}
