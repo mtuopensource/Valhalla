@@ -1,0 +1,8 @@
+<section id="intro" class="px-4 py-8 bg-grey-lighter">
+  <div class="container mx-auto text-center">
+    <p class="text-lg leading-normal mb-6">
+      {{ mission }}
+    </p>
+    {% include 'components/button/Button.twig' with {'title': cta, 'href': cta_link } only %}
+  </div>
+</section>
