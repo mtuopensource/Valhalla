@@ -8,6 +8,8 @@
   });
   add_filter( 'timber/context', function($context) {
     $context['menu'] = new \Timber\Menu( 'primary-menu' );
+    $context['post'] = new \TimberPost();
+    $context['year'] = date('Y');
     return $context;
   });
 ?>
