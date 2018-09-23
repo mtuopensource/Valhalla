@@ -4,7 +4,16 @@
  * Description: A custom WordPress theme for the Open Source Club at Michigan Tech.
  * Version: 1.0
  */
+.h-128 {
+  height: 16rem;
+}
 
- .h-128 {
-   height: 32rem;
- }
+@media (min-width: 768px) { 
+  .h-128 {
+    height: 32rem;
+  }
+}
+
+.object-fit-cover {
+  object-fit: cover;
+}
