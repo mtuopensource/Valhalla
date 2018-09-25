@@ -1,6 +1,6 @@
-# README #
+# VALHALLA #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+This README describes Valhalla, which is a custom wordpress theme for the MTU Open Source Club Website.
 
 ### What is this repository for? ###
 
