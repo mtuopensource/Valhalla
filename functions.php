@@ -1,5 +1,5 @@
 <?php
-  function_exists('acf_register_block') or die('Valhalla requires ACF PRO 5.8 or higher');
+  function_exists('acf_register_block');
   require_once(__DIR__ . '/vendor/autoload.php');
 
   $timber = new \Timber\Timber();
