@@ -60,7 +60,9 @@
           <h2>Dates to Remember</h2>
           {% include 'components/button/Button.twig' with {'title': 'All Events' } only %}
         </div>
-        <hr class="bg-black h-px"> {% for n in 0..3 %}
+        <hr class="bg-black h-px"> 
+        <!--
+        {% for n in 0..3 %}
         <div class="flex items-center justify-between mb-4">
           <div class="w-24 h-24 flex-no-shrink bg-blue mr-4 text-center flex flex-col items-center justify-center">
             <span class="text-white font-bold text-4xl leading-none">
@@ -80,7 +82,83 @@
             </span>
           </div>
         </div>
-        {% endfor %}
+        {% endfor %} -->
+        <div class="flex items-center justify-between mb-4">
+            <div class="w-24 h-24 flex-no-shrink bg-blue mr-4 text-center flex flex-col items-center justify-center">
+              <span class="text-white font-bold text-4xl leading-none">
+                26
+              </span>
+              <span class="text-white font-light text-2xl leading-none">
+                Feb
+              </span>
+            </div>
+            <div class="block bg-white flex-grow h-24 p-4">
+              <span class="font-semibold text-xl leading-normal">
+                Weekly Meeting
+              </span>
+              <br>
+              <span class="font-light text-lg leading-normal">
+                EERC 218, 6 - 7pm
+              </span>
+            </div>
+          </div>
+          <div class="flex items-center justify-between mb-4">
+              <div class="w-24 h-24 flex-no-shrink bg-blue mr-4 text-center flex flex-col items-center justify-center">
+                <span class="text-white font-bold text-4xl leading-none">
+                  5
+                </span>
+                <span class="text-white font-light text-2xl leading-none">
+                  Mar
+                </span>
+              </div>
+              <div class="block bg-white flex-grow h-24 p-4">
+                <span class="font-semibold text-xl leading-normal">
+                  Weekly Meeting
+                </span>
+                <br>
+                <span class="font-light text-lg leading-normal">
+                  EERC 218, 6 - 7pm
+                </span>
+              </div>
+            </div>
+            <div class="flex items-center justify-between mb-4">
+                <div class="w-24 h-24 flex-no-shrink bg-blue mr-4 text-center flex flex-col items-center justify-center">
+                  <span class="text-white font-bold text-4xl leading-none">
+                    19
+                  </span>
+                  <span class="text-white font-light text-2xl leading-none">
+                    Mar
+                  </span>
+                </div>
+                <div class="block bg-white flex-grow h-24 p-4">
+                  <span class="font-semibold text-xl leading-normal">
+                    Weekly Meeting
+                  </span>
+                  <br>
+                  <span class="font-light text-lg leading-normal">
+                    EERC 218, 6 - 7pm
+                  </span>
+                </div>
+              </div>
+              <div class="flex items-center justify-between mb-4">
+                  <div class="w-24 h-24 flex-no-shrink bg-blue mr-4 text-center flex flex-col items-center justify-center">
+                    <span class="text-white font-bold text-4xl leading-none">
+                      26
+                    </span>
+                    <span class="text-white font-light text-2xl leading-none">
+                      Mar
+                    </span>
+                  </div>
+                  <div class="block bg-white flex-grow h-24 p-4">
+                    <span class="font-semibold text-xl leading-normal">
+                      Weekly Meeting
+                    </span>
+                    <br>
+                    <span class="font-light text-lg leading-normal">
+                      EERC 218, 6 - 7pm
+                    </span>
+                  </div>
+                </div>
       </div>
       <div class="w-full lg:w-3/5">
 
