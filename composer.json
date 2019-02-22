@@ -1,0 +1,15 @@
+{
+    "name": "opensourcemtu/valhalla",
+    "description": "Custom WordPress theme for the Open Source Club at Michigan Tech.",
+    "type": "project",
+    "license": "GNU General Public License v2.0",
+    "authors": [
+        {
+            "name": "Open Source Club at Michigan Tech",
+            "email": "mtuopensource@gmail.com"
+        }
+    ],
+    "require": {
+        "timber/timber": "^1.9"
+    }
+}
