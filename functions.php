@@ -1,7 +1,10 @@
 <?php
+  function_exists('acf_register_block') or die('Valhalla requires ACF PRO 5.8 or higher');
   require_once(__DIR__ . '/vendor/autoload.php');
-  $timber = new \Timber\Timber();
 
+  $timber = new \Timber\Timber();
+  Timber::$dirname = array('views');
+  
   add_theme_support( 'title-tag' );
   add_action( 'init', function() {
     register_nav_menu( 'primary-menu', 'Primary Menu');
