@@ -1,0 +1,14 @@
+<header class="header">
+	<div class="header__container">
+		<span class="header__title">{{ site.title }}</span>
+		<nav class="navigation">
+			<ul class="navigation__list">
+				{% for item in menu.items %}
+				<li class="navigation__item">
+					<a href="{{ item.link }}" class="navigation__link">{{ item.name }}</a>
+				</li>
+				{% endfor %}
+			</ul>
+		</nav>
+	</div>
+</header>
