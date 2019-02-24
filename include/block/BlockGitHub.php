@@ -31,7 +31,7 @@ class BlockGitHub extends Block {
         $org = strtolower($org);
         $num = get_field('number_of_results');
 
-        $block = new GitHubBlock($org, $num);
+        $block = new BlockGitHub($org, $num);
         $context = array();
         $context['repositories'] = $block->repositories;
         $context['defaultimage'] = get_field('default_image');
