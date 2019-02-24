@@ -16,7 +16,7 @@ class GitHubBlock extends Block {
             $this->client = new \Github\Client();
             $this->client->addCache($this->redis_pool);
     
-            $this->repositories = $this->client->api('organizations')->organizations($org);
+            $this->repositories = $this->client->api('organizations')->repositories($org);
             $this->repositories = from($this->repositories)->orderByDescending('$v["updated_at"]');
             $this->repositories = from($this->repositories)->take($num);
 
