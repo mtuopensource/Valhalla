@@ -1,5 +1,6 @@
 <?php
   require_once(__DIR__ . '/vendor/autoload.php');
+  require_once(__DIR__ . '/blocks/Block.php');
   require_once(__DIR__ . '/blocks/GitHubBlock.php');
 
   function_exists('acf_register_block') or die('Valhalla requires Advanced Custom Fields 5.8');
