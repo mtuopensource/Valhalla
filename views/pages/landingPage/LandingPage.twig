@@ -1,10 +1,12 @@
 {% extends 'pages/Base.twig' %}
 {% block content %}
+  
+
+
   {% include 'pages/landingPage/hero/Hero.twig' with {'quote': post.hero_quote, 'author': post.hero_author, 'image': TimberImage(post.hero_image) } only %}
   {% include 'pages/landingPage/intro/Intro.twig' with {'mission': post.mission, 'cta': post.mission_cta, 'cta_link': post.mission_cta_link } only %}
-  {% include 'blocks/GitHub.twig' %}
-
-
+  {{ post.content }}
+  
   <section id="information" class="p-8 bg-grey-lighter">
     <div class="container mx-auto lg:flex">
       <div class="w-full lg:w-2/5 lg:mr-8">

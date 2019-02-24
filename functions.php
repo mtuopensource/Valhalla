@@ -1,14 +1,12 @@
 <?php
-  ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
-
-  function_exists('acf_register_block');
   require_once(__DIR__ . '/vendor/autoload.php');
+  require_once(__DIR__ . '/blocks/GitHubBlock.php');
 
-  $timber = new \Timber\Timber();
-  Timber::$dirname = array('views');
+  function_exists('acf_register_block') or die('Valhalla requires Advanced Custom Fields 5.8');
   
+  $timber = new Timber\Timber();
+  Timber::$dirname = array('blocks', 'views');
+
   add_theme_support( 'title-tag' );
   add_action( 'init', function() {
     register_nav_menu( 'primary-menu', 'Primary Menu');
@@ -21,5 +19,16 @@ error_reporting(E_ALL);
     $context['post'] = new \TimberPost();
     $context['year'] = date('Y');
     return $context;
+  });
+
+  add_action('init', function() {
+    $options = array(
+      'name'            => 'recent-commits',
+      'title'           => 'Recent GitHub Commits',
+      'render_callback'	=> 'GitHubBlock::render',
+      'category'        => 'widgets',
+      'icon'            => 'dashicons-clock'
+    );
+    acf_register_block($options);
   });
 ?>
