@@ -13,7 +13,7 @@ class GitHubBlock extends Block {
             $this->redis->connect('localhost', 6379);
             $this->redis_pool = new RedisCachePool($this->redis);
     
-            $this->client = new \GitHub\Client();
+            $this->client = new \Github\Client();
             $this->client->addCache($this->redis_pool);
     
             $this->repositories = $this->client->api('organizations')->organizations($org);
