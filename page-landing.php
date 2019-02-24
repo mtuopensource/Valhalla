@@ -5,10 +5,12 @@
  */
 
 $NUM_EVENTS = 4;
-$NUM_REPOS = 4;
 $GOOGLE_PERMISSIONS = Google_Service_Calendar::CALENDAR_READONLY;
 $GOOGLE_AUTH_CONFIG = '/credentials.json';
 $GOOGLE_CALENDAR_ID = 'mtu.edu_09qi6pfnktib7heh2grshjvqo4@group.calendar.google.com';
+
+$NUM_REPOS = 4;
+$GITHUB_ORGANIZATION = 'MTUOpensource';
 
 $client = new Google_Client();
 $client->setAuthConfig(get_template_directory() . $GOOGLE_AUTH_CONFIG);
@@ -29,7 +31,7 @@ $context = Timber::get_context();
 $context['calendar_events'] = $results;
 
 $client = new \Github\Client();
-$repositories = $client->api('organizations')->repositories('mtuopensource');
+$repositories = $client->api('organizations')->repositories($GITHUB_ORGANIZATION);
 
 usort($repositories, function($a, $b) {
 	$a = strtotime($a['updated_at']);
