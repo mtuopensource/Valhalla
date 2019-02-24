@@ -14,7 +14,7 @@
 		<div class="project">
 			<img src="{{ cover_url }}" class="project__cover" alt="{{ repo.name }}" />
 			<h3 class="project__title">
-				<a href="#" class="project__link">{{ repo.name }}</a>
+				<a href="{{ repo.html_url }}" class="project__link">{{ repo.name }}</a>
 			</h3>
 			<span class="project__timestamp">updated {{ repo.pushed_at | time_ago }}</span>
 		</div>
