@@ -34,6 +34,7 @@ class GitHubBlock extends Block {
         $block = new GitHubBlock($org, $num);
         $context = array();
         $context['repositories'] = $block->repositories;
+        $context['defaultimage'] = get_field('default_image');
 
         Timber::render('views/blocks/GitHub.twig', $context);
     }

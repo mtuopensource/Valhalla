@@ -4,8 +4,7 @@
         {% for repo in repositories %}
         {% set cover_url = repo.html_url ~ '/raw/master/cover.png' %}
         {% if function('get_headers', cover_url, 1)[0] != 'HTTP/1.1 302 Found' %}
-            <!-- TODO: Option -->
-            {% set cover_url = '/wp-content/uploads/2019/02/not-found.png' %}
+            {% set cover_url = defaultimage %}
         {% endif %}
         <div class="project">
             <img src="{{ cover_url }}" class="project__cover" alt="{{ repo.name }}" />
