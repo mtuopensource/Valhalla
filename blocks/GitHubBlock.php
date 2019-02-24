@@ -32,9 +32,8 @@ class GitHubBlock extends Block {
         $num = get_field('number_of_results');
 
         $block = new GitHubBlock($org, $num);
-
         $context = array();
-        $context['repositories'] = $this->repositories;
+        $context['repositories'] = $block->repositories;
 
         Timber::render('views/blocks/GitHub.twig', $context);
     }
