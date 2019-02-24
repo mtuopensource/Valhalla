@@ -1,7 +1,7 @@
 <?php
-class GitHubBlock extends Block {
-    use Cache\Adapter\Redis\RedisCachePool;
+use Cache\Adapter\Redis\RedisCachePool;
 
+class GitHubBlock extends Block {
     private $redis;
     private $redis_pool;
     private $client;
