@@ -2,25 +2,8 @@
 {% block content %}
   {% include 'pages/landingPage/hero/Hero.twig' with {'quote': post.hero_quote, 'author': post.hero_author, 'image': TimberImage(post.hero_image) } only %}
   {% include 'pages/landingPage/intro/Intro.twig' with {'mission': post.mission, 'cta': post.mission_cta, 'cta_link': post.mission_cta_link } only %}
-  
-  <section class="projects">
-	<h2>Featured Projects</h2>
-	<div class="projects__container">
-		{% for repo in repositories %}
-		{% set cover_url = repo.html_url ~ '/raw/master/cover.png' %}
-		{% if function('get_headers', cover_url, 1)[0] != 'HTTP/1.1 302 Found' %}
-			{% set cover_url = '/wp-content/uploads/2019/02/not-found.png' %}
-		{% endif %}
-		<div class="project">
-			<img src="{{ cover_url }}" class="project__cover" alt="{{ repo.name }}" />
-			<h3 class="project__title">
-				<a href="{{ repo.html_url }}" class="project__link">{{ repo.name }}</a>
-			</h3>
-			<span class="project__timestamp">updated {{ repo.pushed_at | time_ago }}</span>
-		</div>
-		{% endfor %}
-	</div>
-  </section>
+  {% include 'blocks/GitHub.twig' %}
+
 
   <section id="information" class="p-8 bg-grey-lighter">
     <div class="container mx-auto lg:flex">
