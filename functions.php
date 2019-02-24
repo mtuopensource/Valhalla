@@ -1,7 +1,7 @@
 <?php
   require_once(__DIR__ . '/vendor/autoload.php');
-  require_once(__DIR__ . '/blocks/Block.php');
-  require_once(__DIR__ . '/blocks/GitHubBlock.php');
+  require_once(__DIR__ . '/include/block/Block.php');
+  require_once(__DIR__ . '/include/block/BlockGitHub.php');
 
   function_exists('acf_register_block') or die('Valhalla requires Advanced Custom Fields 5.8');
   
@@ -26,7 +26,7 @@
     $options = array(
       'name'            => 'recent-commits',
       'title'           => 'Recent GitHub Commits',
-      'render_callback'	=> 'GitHubBlock::render',
+      'render_callback'	=> 'BlockGitHub::render',
       'category'        => 'widgets',
       'icon'            => 'dashicons-clock'
     );

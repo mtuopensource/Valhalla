@@ -52,6 +52,12 @@ body
 {
 	color: white;
 	text-decoration: none;
+	transition: color, 0.3s;
+}
+
+.navigation__link:hover, .navigation__link:focus
+{
+	color: #FFCD00;
 }
 
 .hero
