@@ -14,13 +14,13 @@ class GitHubBlock extends Block {
             $this->redis_pool = new RedisCachePool($this->redis);
     
             $this->client = new \Github\Client();
-            $this->client->addCache($this->redis_pool);
+            $this->client->addCache($this->redis_pool); # reduce api requests using cache
     
             $this->repositories = $this->client->api('organizations')->repositories($org);
-            $this->repositories = from($this->repositories)->orderByDescending('$v["updated_at"]');
-            $this->repositories = from($this->repositories)->take($num);
+            $this->repositories = from($this->repositories)->orderByDescending('$v["updated_at"]'); # most recently pushed
+            $this->repositories = from($this->repositories)->take($num); # reduce
 
-            $this->client->removeCache();
+            $this->client->removeCache(); # cleanup resources we're using
         } catch(Exception $e) {
             echo $e->getMessage();
         }
