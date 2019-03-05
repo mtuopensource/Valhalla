@@ -2,6 +2,7 @@
   require_once(__DIR__ . '/vendor/autoload.php');
   require_once(__DIR__ . '/include/block/Block.php');
   require_once(__DIR__ . '/include/block/BlockGitHub.php');
+  require_once(__DIR__ . '/include/block/BlockGoogleCalendar.php');
 
   function_exists('acf_register_block') or die('Valhalla requires Advanced Custom Fields 5.8');
   
@@ -31,5 +32,12 @@
       'icon'            => 'dashicons-clock'
     );
     acf_register_block($options);
+      $options = array(
+      'name'            => 'upcoming-events',
+      'title'           => 'Upcoming Events',
+      'render_callback'	=> 'BlockGoogleCalendar::render',
+      'category'        => 'widgets',
+      'icon'            => 'dashicons-clock'
+    );
   });
 ?>
