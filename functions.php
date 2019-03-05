@@ -39,5 +39,6 @@
       'category'        => 'widgets',
       'icon'            => 'dashicons-clock'
     );
+    acf_register_block($options);
   });
 ?>
