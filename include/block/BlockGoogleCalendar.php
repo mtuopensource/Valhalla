@@ -2,8 +2,8 @@
 use Cache\Adapter\Redis\RedisCachePool;
 
 class BlockGoogleCalendar extends Block {
-    private const $permissions = Google_Service_Calendar::CALENDAR_READONLY;
-    private const $auth_config = '/credentials.json';
+    private $permissions = Google_Service_Calendar::CALENDAR_READONLY;
+    private $auth_config = '/credentials.json';
     private $calendar;
     private $number_of_events;
     private $client;
@@ -21,14 +21,14 @@ class BlockGoogleCalendar extends Block {
             $this->setScopes($this->permissions);
             
             $this->options = array(
-                'maxResults'   => $this->num_events,
+                'maxResults'   => $this->number_of_events,
                 'orderBy'      => 'startTime',
                 'singleEvents' => true,
                 'timeMin'      => date('c')
             );
             
             $this->service = new Google_Service_Calendar($this->client);
-            $this->results = $this->service->events->listEvents($calendar_id, $options);
+            $this->results = $this->service->events->listEvents($this->calendar, $options);
             $this->results = $this->results->getItems();
         } catch(Exception $e) {
             echo $e->getMessage();
