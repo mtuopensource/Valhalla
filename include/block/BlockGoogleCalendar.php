@@ -1,7 +1,7 @@
 <?php
 use Cache\Adapter\Redis\RedisCachePool;
 
-class BlockGoogleCalendar extends Block {
+class BlockGoogleCalendar implements Block {
     private $permissions = Google_Service_Calendar::CALENDAR_READONLY;
     private $auth_config = '/credentials.json';
     private $calendar;

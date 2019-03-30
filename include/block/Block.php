@@ -1,5 +1,5 @@
 <?php
-abstract class Block {
-    abstract public static function render($block);
+interface Block {
+    public static function render($block);
 }
 ?>

@@ -1,7 +1,7 @@
 <?php
 use Cache\Adapter\Redis\RedisCachePool;
 
-class BlockGitHub extends Block {
+class BlockGitHub implements Block {
     private $redis;
     private $redis_pool;
     private $client;
