@@ -233,3 +233,16 @@ body
 	color: #FFCD00;
 	text-decoration: none;
 }
+
+.information {
+	padding: 2rem;
+	background-color: #F1F5F8;
+
+}
+
+.information__container {
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1200px;
+}
