@@ -344,7 +344,7 @@ hr {
 }
 
 .plug__cover {
-	height: 6rem;
+	height: 12rem;
 	flex: none;
 	background-size: cover;
 	text-align: center;
@@ -389,7 +389,7 @@ hr {
 	}
 	.plug__cover {
 		height: auto;
-		width: 6rem;
+		width: 12rem;
 	}
 	.plug__information {
 		border-left: 0;
