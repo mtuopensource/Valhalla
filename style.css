@@ -213,6 +213,7 @@ body
 .footer {
 	background-color: #2C3840;
 	border-top: 2px solid #FFCD00;
+	padding: 0.75rem;
 }
 
 .footer__container {
