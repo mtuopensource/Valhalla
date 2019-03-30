@@ -270,7 +270,7 @@ body
 		display: flex;
 	}
 	.calendar {
-		width: 66%;
+		width: 33%;
 		margin-right: 2rem;
 	}
 }
@@ -334,16 +334,16 @@ hr {
 	line-height: 1.5;
 }
 
-.ad {
+.plug {
 	width: 100%;
 }
 
-.ad__container {
+.plug__container {
 	width: 100%;
 	margin-bottom: 2rem;
 }
 
-.ad__cover {
+.plug__cover {
 	height: 6rem;
 	flex: none;
 	background-size: cover;
@@ -353,13 +353,13 @@ hr {
 }
 
 @media (min-width: 768px) { 
-	.ad {
-		width: 33%;
+	.plug {
+		width: 66%;
 	}
-	.ad__container {
+	.plug__container {
 		display: flex;
 	}
-	.ad__cover {
+	.plug__cover {
 		height: auto;
 		width: 6rem;
 	}
