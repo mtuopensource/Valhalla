@@ -209,3 +209,26 @@ body
 .object-fit-cover {
   object-fit: cover;
 }
+
+.footer {
+	background-color: #2C3840;
+	border-top: 2px solid #FFCD00;
+}
+
+.footer__container {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	max-width: 1200px;
+}
+
+.footer span {
+	color: white;
+	font-size: 1.125rem;
+}
+
+.footer a {
+	color: #FFCD00;
+	text-decoration: none;
+}
