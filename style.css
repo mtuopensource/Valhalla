@@ -241,8 +241,27 @@ body
 }
 
 .information__container {
-	display: flex;
 	justify-content: space-between;
 	margin: 0 auto;
 	max-width: 1200px;
+}
+
+.calendar {
+	width: 100%;
+}
+
+.calendar__header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+@media (min-width: 768px) { 
+	.information__container {
+		display: flex;
+	}
+	.calendar {
+		width: 66%;
+		margin-right: 2rem;
+	}
 }
