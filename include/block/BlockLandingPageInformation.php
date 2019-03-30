@@ -1,7 +1,5 @@
 <?php
-use Cache\Adapter\Redis\RedisCachePool;
-
-class BlockGoogleCalendar implements Block {
+class BlockLandingPageInformation implements Block {
     private $permissions = Google_Service_Calendar::CALENDAR_READONLY;
     private $auth_config = '/credentials.json';
     private $calendar;
@@ -43,7 +41,7 @@ class BlockGoogleCalendar implements Block {
         $context = array();
         $context['calendar_events'] = $block->results;
 
-        Timber::render('views/blocks/GoogleCalendar.twig', $context);
+        Timber::render('views/blocks/LandingPageInformation.twig', $context);
     }
 }
 ?>
