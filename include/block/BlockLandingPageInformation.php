@@ -37,7 +37,7 @@ class BlockLandingPageInformation implements Block {
         $calendar_id = get_field('calendar_id');
         $number_of_events = get_field('number_of_events');
 
-        $block = new BlockGoogleCalendar($calendar_id, $number_of_events);
+        $block = new BlockLandingPageInformation($calendar_id, $number_of_events);
         $context = array();
         $context['calendar_events'] = $block->results;
 
