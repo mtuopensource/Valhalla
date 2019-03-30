@@ -367,6 +367,7 @@ hr {
 	flex-direction: column;
 	justify-content: space-between;
 	line-height: 1.5;
+	width: 100%;
 }
 
 .plug__text {
