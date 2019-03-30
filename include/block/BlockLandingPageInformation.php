@@ -15,8 +15,8 @@ class BlockLandingPageInformation implements Block {
             $this->calendar = $calendar;
             
             $this->client = new Google_Client();
-            $this->setAuthConfig(get_template_directory() . $this->auth_config);
-            $this->setScopes($this->permissions);
+            $this->client->setAuthConfig(get_template_directory() . $this->auth_config);
+            $this->client->setScopes($this->permissions);
             
             $this->options = array(
                 'maxResults'   => $this->number_of_events,
