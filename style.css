@@ -333,3 +333,34 @@ hr {
 	font-size: 1.125rem;
 	line-height: 1.5;
 }
+
+.ad {
+	width: 100%;
+}
+
+.ad__container {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+.ad__cover {
+	height: 6rem;
+	flex: none;
+	background-size: cover;
+	text-align: center;
+	overflow: hidden;
+	background-image: url(https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260);
+}
+
+@media (min-width: 768px) { 
+	.ad {
+		width: 33%;
+	}
+	.ad__container {
+		display: flex;
+	}
+	.ad__cover {
+		height: auto;
+		width: 6rem;
+	}
+}
