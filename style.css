@@ -309,3 +309,23 @@ hr {
 	font-size: 1.5rem;
 	line-height: 1;
 }
+
+.calendar__information {
+	display: block;
+	background-color: white;
+	flex-grow: 1;
+	height: 6rem;
+	padding: 1rem;
+}
+
+.calendar__summary {
+	font-weight: 600;
+	font-size: 1.25rem;
+	line-height: 1.5;
+}
+
+.calendar__location {
+	font-weight: 300;
+	font-size: 1.125rem;
+	line-height: 1.5;
+}
