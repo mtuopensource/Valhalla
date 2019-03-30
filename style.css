@@ -352,6 +352,34 @@ hr {
 	background-image: url(https://images.pexels.com/photos/167682/pexels-photo-167682.jpeg?auto=compress&amp;cs=tinysrgb&amp;h=750&amp;w=1260);
 }
 
+.plug__content {
+	border-right: 1px;
+	border-bottom: 1px;
+	border-left: 2px;
+	border-color: #dae1e7;
+	background-color: white;
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	line-height: 1.5;
+}
+
+.plug__text {
+	margin-bottom: 2rem;	
+}
+
+.plug__lead {
+	color: black;
+	font-weight: bold;
+	font-size: 1.25rem;
+	margin-bottom: 1rem;
+}
+
+.plug__description {
+	color: #606f7b;
+}
+
 @media (min-width: 768px) { 
 	.plug {
 		width: 66%;
@@ -362,5 +390,9 @@ hr {
 	.plug__cover {
 		height: auto;
 		width: 6rem;
+	}
+	.plug__information {
+		border-left: 0;
+		border-top: 1px;
 	}
 }
