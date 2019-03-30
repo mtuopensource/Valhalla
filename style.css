@@ -256,6 +256,10 @@ body
 	justify-content: space-between;
 }
 
+.calendar__header h2 {
+	margin: 0;
+}
+
 @media (min-width: 768px) { 
 	.information__container {
 		display: flex;
