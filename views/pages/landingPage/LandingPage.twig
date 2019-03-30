@@ -21,10 +21,10 @@
         {% set event_start = date(event.start.dateTime ) %}
         <div class="calendar__item">
           <div class="calendar__date">
-            <span class="text-white font-bold text-4xl leading-none">
+            <span class="calendar__day">
               {{ event_start | date('d') }}
             </span>
-            <span class="text-white font-light text-2xl leading-none">
+            <span class="calendar__month">
               {{ event_start | date('M') }}
             </span>
           </div>
