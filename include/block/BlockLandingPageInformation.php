@@ -40,6 +40,10 @@ class BlockLandingPageInformation implements Block {
         $block = new BlockLandingPageInformation($calendar_id, $number_of_events);
         $context = array();
         $context['calendar_events'] = $block->results;
+        $context['header'] = get_field('header');
+        $context['description'] = get_field('description');
+        $context['cta'] = get_field('cta');
+        $context['cta_link'] = get_field('cta_link');
 
         Timber::render('views/blocks/LandingPageInformation.twig', $context);
     }

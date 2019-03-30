@@ -35,13 +35,13 @@
                 <div class="plug__content">
                     <div class="plug__text">
                         <div class="plug__lead">
-                            Are you interested in Linux, Raspberry Pi, or Arduino?
+                            {{ header }}
                         </div>
                         <p class="plug__description">
-                            If this sounds like you, you might be a perfect member for the Open Source Club at Michigan Tech!
+                            {{ description }}
                         </p>
                     </div>
-                    {% include 'components/button/Button.twig' with {'title': 'Join the Club' } only %}
+                    {% include 'components/button/Button.twig' with {'title': cta , 'href': cta_link } only %}
                 </div>
             </div>
         </div>
