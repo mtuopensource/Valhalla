@@ -8,7 +8,7 @@
  * {
 	box-sizing: border-box;
  }
- 
+
 body 
 {
 	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -280,14 +280,14 @@ hr {
 	height: 1px;
 }
 
-.calendar__item {
+.event {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: 1rem;
 }
 
-.calendar__date {
+.event__meta {
 	width: 6rem;
 	height: 6rem;
 	flex-shrink: 0;
@@ -300,21 +300,21 @@ hr {
 	justify-content: center;
 }
 
-.calendar__day {
+.event__date {
 	color: white;
 	font-weight: bold;
 	font-size: 2.25rem;
 	line-height: 1;
 }
 
-.calendar__month {
+.event__month {
 	color: white;
 	font-weight: 300;
 	font-size: 1.5rem;
 	line-height: 1;
 }
 
-.calendar__information {
+.event__information {
 	display: block;
 	background-color: white;
 	flex-grow: 1;
@@ -322,13 +322,13 @@ hr {
 	padding: 1rem;
 }
 
-.calendar__summary {
+.event__summary {
 	font-weight: 600;
 	font-size: 1.25rem;
 	line-height: 1.5;
 }
 
-.calendar__location {
+.event__location {
 	font-weight: 300;
 	font-size: 1.125rem;
 	line-height: 1.5;

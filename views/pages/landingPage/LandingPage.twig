@@ -19,21 +19,21 @@
         <hr /> 
         {% for event in calendar_events %}
         {% set event_start = date(event.start.dateTime ) %}
-        <div class="calendar__item">
-          <div class="calendar__date">
-            <span class="calendar__day">
+        <div class="event">
+          <div class="event__meta">
+            <span class="event__date">
               {{ event_start | date('d') }}
             </span>
-            <span class="calendar__month">
+            <span class="event__month">
               {{ event_start | date('M') }}
             </span>
           </div>
-          <div class="calendar__information">
-            <span class="calendar__summary">
+          <div class="event__information">
+            <span class="event__summary">
               {{ event.summary }}
             </span>
             <br>
-            <span class="calendar__location">
+            <span class="event__location">
               {{ event.location }}
             </span>
           </div>
