@@ -26,7 +26,7 @@ class BlockLandingPageInformation implements Block {
             );
             
             $this->service = new Google_Service_Calendar($this->client);
-            $this->results = $this->service->events->listEvents($this->calendar, $options);
+            $this->results = $this->service->events->listEvents('mtu.edu_09qi6pfnktib7heh2grshjvqo4@group.calendar.google.com', $options);
             $this->results = $this->results->getItems();
         } catch(Exception $e) {
             echo $e->getMessage();
