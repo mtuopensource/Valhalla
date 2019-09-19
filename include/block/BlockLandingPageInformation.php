@@ -44,6 +44,7 @@ class BlockLandingPageInformation implements Block {
         $context['description'] = get_field('description');
         $context['cta'] = get_field('cta');
         $context['cta_link'] = get_field('cta_link');
+	$context['photo'] = get_field('photo');
 
         Timber::render('views/blocks/LandingPageInformation.twig', $context);
     }

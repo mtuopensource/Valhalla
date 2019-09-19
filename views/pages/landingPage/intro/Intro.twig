@@ -1,7 +1,7 @@
 <section class="introduction">
   <div class="introduction__container">
     <p class="introduction__mission">
-      {{ mission }}
+      {{ mission|raw }}
     </p>
     {% include 'components/button/Button.twig' with {'title': cta, 'href': cta_link } only %}
   </div>

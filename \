@@ -175,7 +175,6 @@ body
 .project
 {
 	width: 100%;
-    text-align: center;
 }
 
 .project:not(:last-of-type)
@@ -209,7 +208,7 @@ body
 .project__timestamp
 {
     display: block;
-	margin: 0 0 2rem 0 ;	
+	margin: 1rem 0;	
 }
 
 @media (min-width: 768px) { 
@@ -224,9 +223,6 @@ body
   }
   .project__timestamp {
     margin: 0;
-  }
-  .project {
-	text-align: left;
   }
 }
 
